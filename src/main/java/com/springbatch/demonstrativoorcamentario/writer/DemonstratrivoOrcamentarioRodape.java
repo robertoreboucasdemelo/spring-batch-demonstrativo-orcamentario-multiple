@@ -30,4 +30,9 @@ public class DemonstratrivoOrcamentarioRodape implements FlatFileFooterCallback 
       totalGeral += grupoLancamento.getTotal();
     }
   }
+  
+  @AfterChunk
+  public void afterChunk(ChunkContext context) {
+	  totalGeral = 0.0;
+  }
 }
